@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ============ SECURITY ============ -->
+<!-- Content-Security-Policy: only our own scripts + the specific 3rd parties we use.
+     Blocks injected/inline malicious scripts (XSS). Also enforced via _headers/.htaccess on the server. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; frame-src https://www.google.com; form-action 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<title>Sai Signature – Premium 1 BHK Homes in Nerul, Navi Mumbai | Sai Realty</title>
+<meta name="description" content="Sai Signature – Premium 1 BHK homes (663–739 sq.ft.) at Plot No 19, Sector 13, Nerul, Navi Mumbai. G+7 tower by Sai Realty. Pre-launch offer. Download brochure & enquire now.">
+<meta name="keywords" content="1 BHK in Nerul, flats in Nerul, Sai Signature, Navi Mumbai real estate, 1 BHK Sector 13 Nerul, Sai Realty">
+<link rel="canonical" href="https://saisignature.com/">
+<meta name="robots" content="index,follow">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+<!-- Open Graph (Facebook / WhatsApp share previews) -->
+<meta property="og:title" content="Sai Signature – Premium 1 BHK Homes in Nerul, Navi Mumbai">
+<meta property="og:description" content="Premium 1 BHK homes at Sector 13, Nerul. G+7 tower. Pre-launch offer – download brochure now.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="building.jpg">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- ============ AD / ANALYTICS TRACKING ============ -->
+<!-- TODO: paste Google Analytics / Google Ads tag here (client to provide ID) -->
+<!-- TODO: paste Facebook Pixel base code here (client to provide Pixel ID) -->
+
+<!-- Structured data for Google Search -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Residence",
+  "name":"Sai Signature",
+  "description":"Premium 1 BHK residential project in Nerul, Navi Mumbai. G+7 tower by Sai Realty.",
+  "url":"https://saisignature.com/",
+  "image":"building.jpg",
+  "address":{"@type":"PostalAddress","streetAddress":"Plot No 19, Sector 13, Nerul","addressLocality":"Navi Mumbai","addressRegion":"Maharashtra","addressCountry":"IN"},
+  "telephone":"+91-9820987799"
+}
+</script>
+
+<style>
+  :root{
+    --ink:#1a2434;            /* dark navy — headings & primary buttons */
+    --ink-2:#243447;
+    --gold:#d9a441;           /* gold — prices, badges, icons */
+    --gold-soft:#f7f0e2;      /* light gold tint for icon circles */
+    --text:#333e4e;
+    --muted:#7c8694;
+    --bg-soft:#f6f7f9;        /* light gray section bg */
+    --cream:#f7f4ed;          /* cta band */
+    --line:#e9edf2;
+    --white:#fff;
+    --radius:16px;
+    --sans:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
+    --shadow:0 14px 40px rgba(26,36,52,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--sans);color:var(--text);background:var(--white);line-height:1.65;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  .container{max-width:1160px;margin:0 auto;padding:0 22px}
+  section{padding:84px 0}
+
+  /* Buttons */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--ink);color:#fff;padding:14px 30px;border-radius:12px;text-decoration:none;font-weight:700;font-size:.95rem;border:none;cursor:pointer;font-family:var(--sans);transition:.25s}
+  .btn:hover{background:var(--ink-2);transform:translateY(-2px);box-shadow:0 10px 24px rgba(26,36,52,.22)}
+  .btn.gold{background:var(--gold);color:#241a06}
+  .btn.gold:hover{background:#c69331;box-shadow:0 10px 24px rgba(217,164,65,.35)}
+  .btn.pill{border-radius:40px}
+  .btn.sm{padding:10px 22px;font-size:.88rem}
+  .link-arrow{color:var(--ink);font-weight:700;text-decoration:none;font-size:.95rem}
+  .link-arrow:hover{color:var(--gold)}
+
+  /* Section headings (sample style: bold navy, left-aligned) */
+  .sec-row{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:38px;flex-wrap:wrap}
+  h2{font-size:clamp(1.7rem,3.4vw,2.25rem);color:var(--ink);font-weight:800;line-height:1.2}
+  .sub{color:var(--muted);margin-top:8px;max-width:560px}
+
+  /* Reveal on scroll */
+  .reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* HEADER */
+  #siteHeader{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);transition:.3s}
+  #siteHeader.scrolled{box-shadow:0 6px 24px rgba(26,36,52,.1)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px;gap:18px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+  .logo svg{width:34px;height:34px;flex:0 0 34px}
+  .logo b{font-size:1.12rem;color:var(--ink);font-weight:800;line-height:1.1;display:block}
+  .logo small{display:block;font-size:.6rem;letter-spacing:2.6px;color:var(--gold);font-weight:700}
+  .nav-links{display:flex;gap:26px;list-style:none;align-items:center}
+  .nav-links a{color:var(--text);text-decoration:none;font-weight:600;font-size:.9rem;transition:.2s}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-right{display:flex;align-items:center;gap:18px}
+  .nav-phone{display:flex;align-items:center;gap:7px;color:var(--ink);text-decoration:none;font-weight:700;font-size:.9rem}
+  .nav-phone span{color:var(--gold)}
+  .menu-toggle{display:none;background:none;border:none;font-size:1.6rem;color:var(--ink);cursor:pointer}
+
+  /* HERO */
+  .hero{position:relative;background:linear-gradient(180deg,#eef3f8 0%,#f9fbfd 70%,#fff 100%);padding:150px 0 90px;overflow:hidden}
+  .hero::after{content:"";position:absolute;left:-10%;right:-10%;bottom:-70px;height:130px;background:#fff;border-radius:50% 50% 0 0}
+  .hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.02fr 1fr;grid-template-areas:"text img" "card img";column-gap:52px}
+  .h-text{grid-area:text;align-self:end}
+  .h-text h1{font-size:clamp(2.4rem,5.6vw,3.9rem);color:var(--ink);font-weight:800;line-height:1.08;letter-spacing:-.5px}
+  .h-text h1 span{color:var(--gold)}
+  .h-text p{color:var(--muted);margin:16px 0 8px;max-width:460px;font-size:1.02rem}
+  .h-card{grid-area:card;align-self:start;background:#fff;border-radius:18px;box-shadow:0 24px 60px rgba(26,36,52,.14);padding:24px;max-width:440px;margin-top:26px}
+  .h-tabs{display:flex;gap:6px;background:var(--bg-soft);padding:5px;border-radius:12px;margin-bottom:16px}
+  .h-tab{flex:1;padding:9px 6px;border:none;border-radius:9px;background:transparent;color:var(--text);font-weight:700;font-size:.85rem;cursor:pointer;font-family:var(--sans);transition:.2s}
+  .h-tab.active{background:var(--gold);color:#241a06;box-shadow:0 4px 12px rgba(217,164,65,.35)}
+  .h-card .field{margin-bottom:12px}
+  .h-card .btn{width:100%}
+  .h-alt{display:block;text-align:center;margin-top:12px;font-size:.86rem;color:var(--muted)}
+  .h-alt a{color:var(--ink);font-weight:700;text-decoration:none}
+  .h-alt a:hover{color:var(--gold)}
+  .h-img{grid-area:img;align-self:center;position:relative}
+  .h-img img{border-radius:22px;box-shadow:0 30px 70px rgba(26,36,52,.22);object-fit:cover;object-position:center 28%;width:100%;height:560px}
+  .h-badge{position:absolute;left:18px;top:18px;background:rgba(255,255,255,.94);border-radius:40px;padding:8px 18px;font-size:.78rem;font-weight:800;color:var(--ink);letter-spacing:1px;box-shadow:0 8px 20px rgba(26,36,52,.16)}
+  .h-badge i{color:var(--gold);font-style:normal}
+
+  /* FEATURE STRIP */
+  .features{padding:56px 0}
+  .features .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:26px}
+  .feat{display:flex;gap:15px;align-items:flex-start}
+  .feat .ic{width:60px;height:60px;flex:0 0 60px;border-radius:50%;background:var(--gold-soft);display:flex;align-items:center;justify-content:center;font-size:1.5rem}
+  .feat b{display:block;color:var(--ink);font-size:1rem;font-weight:800;margin-bottom:3px}
+  .feat p{color:var(--muted);font-size:.86rem;line-height:1.5}
+
+  /* PROPERTY CARDS (sample style) */
+  #config{background:#fff;padding-top:40px}
+  .pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .pcard{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.3s}
+  .pcard:hover{transform:translateY(-7px);box-shadow:0 26px 60px rgba(26,36,52,.16)}
+  .pimg{position:relative;height:206px;background:var(--bg-soft)}
+  .pimg img{width:100%;height:100%;object-fit:cover}
+  .ptag{position:absolute;top:14px;left:14px;background:var(--ink);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:.6px;padding:7px 14px;border-radius:8px}
+  .pheart{position:absolute;top:12px;right:12px;width:38px;height:38px;border-radius:50%;background:rgba(255,255,255,.94);display:flex;align-items:center;justify-content:center;color:var(--gold);font-size:1rem;box-shadow:0 6px 16px rgba(26,36,52,.18)}
+  .pbody{padding:20px 22px 22px}
+  .pbody h3{color:var(--ink);font-size:1.14rem;font-weight:800}
+  .ploc{color:var(--muted);font-size:.86rem;margin:5px 0 14px}
+  .pmeta{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line);padding-top:14px;flex-wrap:wrap}
+  .pspecs{display:flex;gap:12px;color:var(--muted);font-size:.8rem;font-weight:600;flex-wrap:wrap}
+  .pprice{color:var(--gold);font-weight:800;font-size:1.1rem;white-space:nowrap}
+  .offer-note{margin-top:20px;font-size:.84rem;color:var(--muted)}
+
+  /* PRICING */
+  #pricing{background:var(--bg-soft)}
+  .tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:26px}
+  .tab-btn{padding:11px 24px;border-radius:40px;border:1.5px solid var(--line);background:#fff;color:var(--ink);font-weight:700;cursor:pointer;font-size:.88rem;transition:.25s;font-family:var(--sans)}
+  .tab-btn:hover{border-color:var(--gold)}
+  .tab-btn.active{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .price-table{display:none;overflow-x:auto;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line)}
+  .price-table.active{display:block}
+  .price-table table{width:100%;border-collapse:collapse;background:#fff;min-width:640px}
+  .price-table th{background:var(--ink);color:#fff;padding:15px 16px;text-align:left;font-size:.88rem;font-weight:700}
+  .price-table td{padding:14px 16px;border-bottom:1px solid var(--line);font-size:.92rem;color:var(--muted)}
+  .price-table td:first-child{font-weight:700;color:var(--text)}
+  .price-table tr.total td{background:var(--cream);color:var(--ink);font-weight:800;font-size:.98rem}
+  .price-table tr.total td:first-child{border-left:4px solid var(--gold)}
+
+  /* CTA BAND (sample style) */
+  .cta-wrap{padding:30px 0 84px}
+  .cta-band{background:var(--cream);border-radius:26px;display:grid;grid-template-columns:.85fr 1.15fr;overflow:hidden}
+  .cta-band .cimg{min-height:280px}
+  .cta-band .cimg img{width:100%;height:100%;object-fit:cover}
+  .cta-body{padding:52px 48px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}
+  .cta-body h2{margin-bottom:10px}
+  .cta-body p{color:var(--muted);margin-bottom:24px;max-width:440px}
+  .cta-points{list-style:none;margin:-8px 0 24px;color:var(--text);font-size:.92rem}
+  .cta-points li{padding:4px 0}
+  .cta-points li::before{content:"✓";color:var(--gold);font-weight:800;margin-right:9px}
+
+  /* AMENITIES */
+  #amenities{background:#fff;padding-top:0}
+  .agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .amenity{position:relative;height:210px;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:var(--ink)}
+  .amenity img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .amenity:hover img{transform:scale(1.08)}
+  .amenity .ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(20,28,40,.88) 0%,rgba(20,28,40,.28) 58%,rgba(20,28,40,.08));display:flex;flex-direction:column;justify-content:flex-end;padding:20px}
+  .amenity b{color:#fff;font-weight:800;font-size:1.04rem}
+  .amenity small{color:#d5dae2;font-size:.8rem;margin-top:2px}
+  .amenity .ic{font-size:1.5rem;margin-bottom:6px}
+
+  /* LOCATION */
+  #location{background:var(--bg-soft)}
+  .loc-wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:start}
+  .loc-list{list-style:none}
+  .loc-list li{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px;transition:.22s;font-weight:600;font-size:.94rem}
+  .loc-list li:hover{transform:translateX(4px);border-color:var(--gold)}
+  .loc-list li span:last-child{color:var(--gold);font-weight:800}
+  .map-box{border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);min-height:370px}
+  .map-box iframe{width:100%;height:100%;min-height:370px;border:0;display:block}
+
+  /* ABOUT */
+  #about{background:#fff}
+  .about-wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:50px;align-items:center}
+  .about-wrap p{color:var(--muted);margin-bottom:14px}
+  .about-wrap p strong{color:var(--ink)}
+  .about-stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
+  .astat{background:var(--bg-soft);border:1px solid var(--line);border-radius:14px;padding:16px 22px;min-width:130px}
+  .astat b{display:block;color:var(--ink);font-size:1.25rem;font-weight:800}
+  .astat small{color:var(--muted);font-size:.8rem}
+  .about-img img{border-radius:22px;box-shadow:0 26px 60px rgba(26,36,52,.18)}
+
+  /* ENQUIRY */
+  #enquiry{background:var(--bg-soft)}
+  .enq-card{display:grid;grid-template-columns:1fr 1.1fr;background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 26px 60px rgba(26,36,52,.12);border:1px solid var(--line)}
+  .enq-info{background:linear-gradient(160deg,var(--ink),#2a3b52);color:#fff;padding:46px}
+  .enq-info h2{color:#fff;margin-bottom:12px}
+  .enq-info p{color:#c3ccd8;margin-bottom:26px}
+  .contact-line{display:flex;align-items:center;gap:14px;margin-bottom:15px;font-weight:600;font-size:.95rem}
+  .contact-line .ic{width:40px;height:40px;flex:0 0 40px;border-radius:11px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-size:1.05rem}
+  .enq-form{padding:46px}
+  form .field{margin-bottom:14px}
+  form label{display:block;font-weight:700;font-size:.84rem;margin-bottom:6px;color:var(--ink)}
+  form input,form textarea,form select{width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:11px;font-size:.94rem;font-family:inherit;color:var(--text);background:#fff;transition:.2s}
+  form input:focus,form textarea:focus,form select:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(217,164,65,.16)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+  /* FOOTER */
+  footer{background:#16212f;color:#aeb7c4;padding:56px 0 26px}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:38px;margin-bottom:32px}
+  .foot h4{color:#fff;font-size:1.05rem;font-weight:800;margin-bottom:14px}
+  .foot p,.foot a{color:#aeb7c4;font-size:.9rem;text-decoration:none;display:block;margin-bottom:9px}
+  .foot a:hover{color:var(--gold)}
+  .flogo{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+  .flogo b{color:#fff;font-size:1.1rem;font-weight:800}
+  .flogo small{display:block;font-size:.58rem;letter-spacing:2.4px;color:var(--gold);font-weight:700}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:22px;text-align:center;font-size:.82rem;color:#8b95a3}
+  .rera-note{max-width:900px;margin:0 auto 14px;font-size:.76rem;color:#7a848f;line-height:1.6}
+
+  /* FLOATING + STICKY */
+  .float-btns{position:fixed;right:18px;bottom:18px;display:flex;flex-direction:column;gap:12px;z-index:99}
+  .float-btns a{width:54px;height:54px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#fff;text-decoration:none;box-shadow:0 6px 20px rgba(0,0,0,.26)}
+  .fb-wa{background:#25d366}
+  .fb-call{background:var(--ink)}
+  .sticky-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:100;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 16px rgba(0,0,0,.1)}
+  .sticky-bar a{flex:1;text-align:center;padding:14px 4px;font-weight:800;font-size:.9rem;text-decoration:none}
+  .sb-call{color:var(--ink)}
+  .sb-wa{color:#1da851}
+  .sb-enq{background:var(--ink);color:#fff}
+
+  /* MODAL */
+  .modal{display:none;position:fixed;inset:0;background:rgba(20,28,40,.68);z-index:200;align-items:center;justify-content:center;padding:20px}
+  .modal.open{display:flex}
+  .modal-card{background:#fff;border-radius:20px;padding:32px 30px;max-width:430px;width:100%;position:relative;box-shadow:0 30px 70px rgba(0,0,0,.38)}
+  .modal-card h3{color:var(--ink);font-size:1.4rem;font-weight:800;margin-bottom:5px}
+  .modal-card .msub{color:var(--muted);font-size:.9rem;margin-bottom:20px}
+  .modal-close{position:absolute;top:14px;right:18px;background:none;border:none;font-size:1.4rem;color:var(--muted);cursor:pointer;line-height:1}
+
+  @media(max-width:980px){
+    .h-img img{height:480px}
+  }
+  @media(max-width:900px){
+    .hero{padding:120px 0 70px}
+    .hero-grid{grid-template-columns:1fr;grid-template-areas:"text" "img" "card";column-gap:0}
+    .h-img{margin-top:26px}
+    .h-img img{height:400px}
+    .h-card{max-width:100%;margin-top:22px}
+    .features .grid{grid-template-columns:repeat(2,1fr)}
+    .pgrid,.agrid{grid-template-columns:repeat(2,1fr)}
+    .loc-wrap,.about-wrap,.enq-card,.cta-band,.foot-grid{grid-template-columns:1fr}
+    .enq-info,.enq-form{padding:34px}
+    .cta-body{padding:36px 30px}
+    .nav-links{display:none;position:absolute;top:74px;left:0;right:0;background:#fff;flex-direction:column;padding:18px 22px;gap:4px;box-shadow:0 14px 28px rgba(26,36,52,.14);align-items:flex-start}
+    .nav-links.open{display:flex}
+    .nav-links a{padding:10px 0;width:100%}
+    .menu-toggle{display:block}
+    .nav-right{display:none}
+    .sticky-bar{display:flex}
+    .float-btns{display:none}
+    body{padding-bottom:54px}
+    section{padding:64px 0}
+  }
+  @media(max-width:560px){
+    .pgrid,.agrid,.features .grid{grid-template-columns:1fr}
+    .h-img img{height:330px}
+    .pmeta{flex-direction:column;align-items:flex-start}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .reveal{opacity:1;transform:none;transition:none}
+    html{scroll-behavior:auto}
+  }
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="container nav">
+    <a class="logo" href="#top" aria-label="Sai Signature home">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M6 26 24 10l18 16" stroke="#d9a441" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M13 25v13h22V25" stroke="#1a2434" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span><b>Sai Signature</b><small>BY SAI REALTY</small></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#top">Home</a></li>
+      <li><a href="#config">1 BHK</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#amenities">Amenities</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#enquiry">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a class="nav-phone" href="tel:+919820987799"><span>📞</span> +91 98209 87799</a>
+      <a href="#enquiry" class="btn pill sm">Enquire Now</a>
+    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="container hero-grid">
+    <div class="h-text">
+      <h1>Find Your Dream<br>1 BHK in <span>Nerul</span></h1>
+      <p>Sai Signature — a premium G+7 residential tower at Sector 13, Nerul, Navi Mumbai. Comfort, luxury and connectivity, all in one place.</p>
+    </div>
+
+    <!-- Quick enquiry card (sample's search card, adapted for lead capture) -->
+    <div class="h-card">
+      <div class="h-tabs" id="flatTabs">
+        <button type="button" class="h-tab active" data-flat="663 sq.ft.">663 sq.ft.</button>
+        <button type="button" class="h-tab" data-flat="716 sq.ft.">716 sq.ft.</button>
+        <button type="button" class="h-tab" data-flat="739 sq.ft.">739 sq.ft.</button>
+      </div>
+      <form data-lead-type="Quick Enquiry" autocomplete="off" novalidate>
+        <div class="hp" aria-hidden="true"><label>Website<input type="text" name="Website" tabindex="-1" autocomplete="off"></label></div>
+        <input type="hidden" name="Flat" value="663 sq.ft.">
+        <div class="field"><input type="text" name="Name" required maxlength="60" placeholder="Your name"></div>
+        <div class="field"><input type="tel" name="Mobile" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number"></div>
+        <button class="btn" type="submit">Get Best Price</button>
+      </form>
+      <span class="h-alt">or <a href="#" data-action="open-brochure">📄 Download Brochure</a></span>
+    </div>
+
+    <div class="h-img">
+      <img src="building.jpg" alt="Sai Signature G+7 tower, Sector 13 Nerul" fetchpriority="high">
+      <span class="h-badge"><i>●</i> NEW LAUNCH • PRE-LAUNCH OFFER</span>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURE STRIP -->
+<div class="features">
+  <div class="container">
+    <div class="grid reveal">
+      <div class="feat"><div class="ic">📍</div><div><b>Prime Location</b><p>Sector 13, Nerul — schools, hospitals &amp; markets nearby.</p></div></div>
+      <div class="feat"><div class="ic">🛡️</div><div><b>Trusted &amp; Secure</b><p>RERA registered project with transparent dealings.</p></div></div>
+      <div class="feat"><div class="ic">💰</div><div><b>Best Value</b><p>Pre-launch prices with flexible payment plans.</p></div></div>
+      <div class="feat"><div class="ic">🧭</div><div><b>Vastu-Friendly</b><p>Efficient layouts designed by Vastuyog Architects.</p></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 1 BHK RESIDENCES (property cards) -->
+<section id="config">
+  <div class="container">
+    <div class="sec-row reveal">
+      <div>
+        <h2>1 BHK Residences</h2>
+        <p class="sub">Smartly planned homes designed for families and first-time buyers.</p>
+      </div>
+      <a class="link-arrow" href="#pricing">View Payment Plans →</a>
+    </div>
+    <div class="pgrid reveal">
+      <div class="pcard">
+        <div class="pimg">
+          <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=70" alt="1 BHK Compact interior" loading="lazy">
+          <span class="ptag">PRE-LAUNCH</span><span class="pheart">♡</span>
+        </div>
+        <div class="pbody">
+          <h3>1 BHK — Compact</h3>
+          <div class="ploc">📍 Sector 13, Nerul, Navi Mumbai</div>
+          <div class="pmeta">
+            <div class="pspecs"><span>🛏 1 Bed</span><span>🚿 1 Bath</span><span>📐 663 Sq Ft</span></div>
+            <div class="pprice">₹ 66.88 L*</div>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?w=800&q=70" alt="1 BHK Classic residence" loading="lazy">
+          <span class="ptag">PRE-LAUNCH</span><span class="pheart">♡</span>
+        </div>
+        <div class="pbody">
+          <h3>1 BHK — Classic</h3>
+          <div class="ploc">📍 Sector 13, Nerul, Navi Mumbai</div>
+          <div class="pmeta">
+            <div class="pspecs"><span>🛏 1 Bed</span><span>🚿 1 Bath</span><span>📐 716 Sq Ft</span></div>
+            <div class="pprice">₹ 72.13 L*</div>
+          </div>
+        </div>
+      </div>
+      <div class="pcard">
+        <div class="pimg">
+          <img src="building.jpg" alt="1 BHK Grand – Sai Signature tower" loading="lazy" style="object-position:center 24%">
+          <span class="ptag">PRE-LAUNCH</span><span class="pheart">♡</span>
+        </div>
+        <div class="pbody">
+          <h3>1 BHK — Grand</h3>
+          <div class="ploc">📍 Sector 13, Nerul, Navi Mumbai</div>
+          <div class="pmeta">
+            <div class="pspecs"><span>🛏 1 Bed</span><span>🚿 1 Bath</span><span>📐 739 Sq Ft</span></div>
+            <div class="pprice">₹ 74.41 L*</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p class="offer-note">*Pre-Launch 100% Down Payment offer, all-inclusive (development, society transfer &amp; legal charges). Parking &amp; floor rise extra. Living • Kitchen • Bedroom • Bath • Balcony in every home.</p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <div class="sec-row reveal">
+      <div>
+        <h2>Pre-Launch Payment Plans</h2>
+        <p class="sub">Choose the plan that works best for you — bigger down payment, bigger savings.</p>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="tabs">
+        <button class="tab-btn active" type="button" data-plan="0">Regular Plan</button>
+        <button class="tab-btn" type="button" data-plan="1">50% Down Payment</button>
+        <button class="tab-btn" type="button" data-plan="2">100% Down Payment</button>
+      </div>
+
+      <div class="price-table active">
+        <table>
+          <tr><th>Particulars</th><th>1 BHK (739 sq.ft.)</th><th>1 BHK (716 sq.ft.)</th><th>1 BHK (663 sq.ft.)</th></tr>
+          <tr><td>Flat Cost</td><td>₹ 84,98,500</td><td>₹ 82,34,000</td><td>₹ 76,24,500</td></tr>
+          <tr><td>Development Charges</td><td>₹ 2,95,600</td><td>₹ 2,86,400</td><td>₹ 2,65,200</td></tr>
+          <tr><td>Society Transfer &amp; Con. Charges</td><td>₹ 1,00,000</td><td>₹ 1,00,000</td><td>₹ 1,00,000</td></tr>
+          <tr><td>Legal</td><td>₹ 25,000</td><td>₹ 25,000</td><td>₹ 25,000</td></tr>
+          <tr class="total"><td>TOTAL</td><td>₹ 89,19,100</td><td>₹ 86,45,400</td><td>₹ 80,14,700</td></tr>
+          <tr><td>Parking Charges</td><td>₹ 7,00,000</td><td>₹ 7,00,000</td><td>₹ 7,00,000</td></tr>
+          <tr><td>Floor Rise (₹50/sq.ft., from 3rd floor)</td><td>As Applicable</td><td>As Applicable</td><td>As Applicable</td></tr>
+        </table>
+      </div>
+      <div class="price-table">
+        <table>
+          <tr><th>Particulars</th><th>1 BHK (739 sq.ft.)</th><th>1 BHK (716 sq.ft.)</th><th>1 BHK (663 sq.ft.)</th></tr>
+          <tr><td>Flat Cost</td><td>₹ 77,59,500</td><td>₹ 75,18,000</td><td>₹ 69,61,500</td></tr>
+          <tr><td>Development Charges</td><td>₹ 2,95,600</td><td>₹ 2,86,400</td><td>₹ 2,65,200</td></tr>
+          <tr><td>Society Transfer &amp; Con. Charges</td><td>₹ 1,00,000</td><td>₹ 1,00,000</td><td>₹ 1,00,000</td></tr>
+          <tr><td>Legal</td><td>₹ 25,000</td><td>₹ 25,000</td><td>₹ 25,000</td></tr>
+          <tr class="total"><td>TOTAL</td><td>₹ 81,80,100</td><td>₹ 79,29,400</td><td>₹ 73,51,700</td></tr>
+          <tr><td>Parking Charges</td><td>₹ 7,00,000</td><td>₹ 7,00,000</td><td>₹ 7,00,000</td></tr>
+          <tr><td>Floor Rise (₹50/sq.ft., from 3rd floor)</td><td>As Applicable</td><td>As Applicable</td><td>As Applicable</td></tr>
+        </table>
+      </div>
+      <div class="price-table">
+        <table>
+          <tr><th>Particulars</th><th>1 BHK (739 sq.ft.)</th><th>1 BHK (716 sq.ft.)</th><th>1 BHK (663 sq.ft.)</th></tr>
+          <tr><td>Flat Cost</td><td>₹ 70,20,500</td><td>₹ 68,02,000</td><td>₹ 62,98,500</td></tr>
+          <tr><td>Development Charges</td><td>₹ 2,95,600</td><td>₹ 2,86,400</td><td>₹ 2,65,200</td></tr>
+          <tr><td>Society Transfer &amp; Con. Charges</td><td>₹ 1,00,000</td><td>₹ 1,00,000</td><td>₹ 1,00,000</td></tr>
+          <tr><td>Legal</td><td>₹ 25,000</td><td>₹ 25,000</td><td>₹ 25,000</td></tr>
+          <tr class="total"><td>TOTAL</td><td>₹ 74,41,100</td><td>₹ 72,13,400</td><td>₹ 66,88,700</td></tr>
+          <tr><td>Parking Charges</td><td>₹ 7,00,000</td><td>₹ 7,00,000</td><td>₹ 7,00,000</td></tr>
+          <tr><td>Floor Rise (₹50/sq.ft., from 3rd floor)</td><td>As Applicable</td><td>As Applicable</td><td>As Applicable</td></tr>
+        </table>
+      </div>
+      <p class="offer-note">Prices as per Pre-Launch offer. Government charges (stamp duty, registration, GST) as applicable.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND (brochure) -->
+<div class="cta-wrap">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div class="cimg">
+        <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=900&q=70" alt="Premium residence interior" loading="lazy">
+      </div>
+      <div class="cta-body">
+        <h2>Ready to Own Your Dream Home?</h2>
+        <p>Get the complete Sai Signature brochure instantly on your phone.</p>
+        <ul class="cta-points">
+          <li>Detailed Floor Plans</li>
+          <li>All Payment Plan Options</li>
+          <li>Amenities &amp; Specifications</li>
+          <li>Location Map &amp; Connectivity</li>
+        </ul>
+        <button class="btn" type="button" data-action="open-brochure">📄 Download Brochure</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- AMENITIES -->
+<section id="amenities">
+  <div class="container">
+    <div class="sec-row reveal">
+      <div>
+        <h2>Amenities</h2>
+        <p class="sub">Comfort and convenience built into everyday life.</p>
+      </div>
+    </div>
+    <div class="agrid reveal">
+      <div class="amenity">
+        <img src="https://images.unsplash.com/photo-1503174971373-b1f69850bded?w=700&q=70" alt="Premium lobby with high-speed lift access" loading="lazy">
+        <div class="ov"><span class="ic">🛗</span><b>High-Speed Lift</b><small>Fast, smooth access to every floor</small></div>
+      </div>
+      <div class="amenity">
+        <img src="https://images.unsplash.com/photo-1557597774-9d273605dfa9?w=700&q=70" alt="CCTV security" loading="lazy">
+        <div class="ov"><span class="ic">📹</span><b>CCTV Security</b><small>Round-the-clock surveillance</small></div>
+      </div>
+      <div class="amenity">
+        <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?w=700&q=70" alt="Covered parking" loading="lazy">
+        <div class="ov"><span class="ic">🚗</span><b>Covered Parking</b><small>Dedicated &amp; secure parking</small></div>
+      </div>
+      <div class="amenity">
+        <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?w=700&q=70" alt="Power backup" loading="lazy">
+        <div class="ov"><span class="ic">⚡</span><b>Power Backup</b><small>Uninterrupted electricity</small></div>
+      </div>
+      <div class="amenity">
+        <img src="https://images.unsplash.com/photo-1538300342682-cf57afb97285?w=700&q=70" alt="24x7 water supply" loading="lazy">
+        <div class="ov"><span class="ic">💧</span><b>24×7 Water Supply</b><small>Always-on water availability</small></div>
+      </div>
+      <div class="amenity">
+        <img src="https://loremflickr.com/700/450/fire,extinguisher?lock=12" alt="Fire safety systems" loading="lazy">
+        <div class="ov"><span class="ic">🔥</span><b>Fire Safety Systems</b><small>Modern fire protection</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+  <div class="container">
+    <div class="sec-row reveal">
+      <div>
+        <h2>Location Advantage</h2>
+        <p class="sub">Plot No 19, Sector 13, Nerul, Navi Mumbai — everything within reach.</p>
+      </div>
+    </div>
+    <div class="loc-wrap reveal">
+      <ul class="loc-list">
+        <li><span>🚆 Nerul Railway Station</span><span>~5 min</span></li>
+        <li><span>🏫 Schools &amp; Colleges</span><span>~5 min</span></li>
+        <li><span>🏥 Hospitals</span><span>~10 min</span></li>
+        <li><span>🛣️ Palm Beach Road</span><span>~10 min</span></li>
+        <li><span>🛍️ Seawoods Grand Central Mall</span><span>~15 min</span></li>
+        <li><span>✈️ Navi Mumbai Intl. Airport</span><span>~25 min</span></li>
+      </ul>
+      <div class="map-box">
+        <iframe src="https://www.google.com/maps?q=Sector+13,+Nerul,+Navi+Mumbai&output=embed" loading="lazy" title="Sai Signature Location" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-wrap reveal">
+      <div>
+        <h2>About the Developer</h2>
+        <p class="sub" style="margin-bottom:18px">Trusted names behind Sai Signature.</p>
+        <p><strong>Sai Realty</strong> is a Navi Mumbai based real estate developer committed to quality construction, transparent dealings and timely delivery. Sai Signature reflects this vision — a thoughtfully planned G+7 residential tower in the heart of Nerul.</p>
+        <p>The project is designed by <strong>Vastuyog Architects</strong>, known for efficient, vastu-friendly layouts and modern elevations that stand out.</p>
+        <div class="about-stats">
+          <div class="astat"><b>G+7</b><small>Premium Tower</small></div>
+          <div class="astat"><b>1 BHK</b><small>Smart Homes</small></div>
+          <div class="astat"><b>Vastu</b><small>Friendly Layouts</small></div>
+        </div>
+      </div>
+      <div class="about-img">
+        <img src="building.jpg" alt="Sai Signature building elevation, Nerul" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENQUIRY -->
+<section id="enquiry">
+  <div class="container reveal">
+    <div class="enq-card">
+      <div class="enq-info">
+        <h2>Enquire Now</h2>
+        <p>Share your details and our team will call you back with pricing, floor plans and site-visit slots.</p>
+        <div class="contact-line"><span class="ic">📞</span> +91 98209 87799</div>
+        <div class="contact-line"><span class="ic">📍</span> Plot No 19, Sector 13, Nerul, Navi Mumbai</div>
+        <div class="contact-line"><span class="ic">✉️</span> info@saisignature.com</div>
+      </div>
+      <div class="enq-form">
+        <form data-lead-type="New Enquiry" autocomplete="off" novalidate>
+          <div class="hp" aria-hidden="true"><label>Website<input type="text" name="Website" tabindex="-1" autocomplete="off"></label></div>
+          <div class="field"><label>Full Name</label><input type="text" name="Name" required maxlength="60" placeholder="Your name"></div>
+          <div class="field"><label>Phone Number</label><input type="tel" name="Mobile" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number"></div>
+          <div class="field"><label>Message (optional)</label><textarea name="Message" rows="3" maxlength="300" placeholder="I'm interested in 1 BHK..."></textarea></div>
+          <button class="btn" type="submit" style="width:100%">Request Callback on WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot">
+        <div class="flogo">
+          <svg viewBox="0 0 48 48" width="30" height="30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6 26 24 10l18 16" stroke="#d9a441" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13 25v13h22V25" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span><b>Sai Signature</b><small>BY SAI REALTY</small></span>
+        </div>
+        <p>Plot No 19, Sector 13, Nerul, Navi Mumbai — 400706</p>
+        <p>Developer: <strong style="color:#fff">Sai Realty</strong></p>
+        <p>Architect: <strong style="color:#fff">Vastuyog Architects</strong></p>
+      </div>
+      <div class="foot">
+        <h4>Quick Links</h4>
+        <a href="#config">1 BHK Residences</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#amenities">Amenities</a>
+        <a href="#location">Location</a>
+      </div>
+      <div class="foot">
+        <h4>Get in Touch</h4>
+        <a href="tel:+919820987799">📞 +91 98209 87799</a>
+        <a href="https://wa.me/919820987799" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+        <a href="mailto:info@saisignature.com">✉️ info@saisignature.com</a>
+        <a href="privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p class="rera-note">MahaRERA Registration No: XXXXXXXXX. This website is for information purposes only and does not constitute an offer or contract. Prices, plans, specifications and images are indicative and subject to change / approvals. Please verify all details with the developer before booking.</p>
+      © 2026 Sai Realty. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- BROCHURE MODAL -->
+<div class="modal" id="brochureModal">
+  <div class="modal-card">
+    <button type="button" class="modal-close" data-action="close-brochure" aria-label="Close">✕</button>
+    <h3>Get the Brochure 📄</h3>
+    <p class="msub">Enter your details — brochure downloads instantly.</p>
+    <form data-lead-type="Brochure Request" autocomplete="off" novalidate>
+      <div class="hp" aria-hidden="true"><label>Website<input type="text" name="Website" tabindex="-1" autocomplete="off"></label></div>
+      <div class="field"><label>Full Name *</label><input type="text" name="Name" required maxlength="60" placeholder="Your name"></div>
+      <div class="field"><label>Mobile Number *</label><input type="tel" name="Mobile" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number"></div>
+      <div class="field"><label>Your Budget</label>
+        <select name="Budget">
+          <option value="">Select budget</option>
+          <option>₹ 60 – 70 Lakh</option>
+          <option>₹ 70 – 80 Lakh</option>
+          <option>₹ 80 – 90 Lakh</option>
+          <option>₹ 90 Lakh +</option>
+        </select>
+      </div>
+      <button class="btn" type="submit" style="width:100%">📄 Download Brochure</button>
+    </form>
+  </div>
+</div>
+
+<div class="float-btns">
+  <a class="fb-wa" href="https://wa.me/919820987799?text=Hi,%20I%20am%20interested%20in%20Sai%20Signature%20Nerul" target="_blank" rel="noopener noreferrer" title="WhatsApp">💬</a>
+  <a class="fb-call" href="tel:+919820987799" title="Call">📞</a>
+</div>
+
+<div class="sticky-bar">
+  <a class="sb-call" href="tel:+919820987799">📞 Call</a>
+  <a class="sb-wa" href="https://wa.me/919820987799?text=Hi,%20I%20am%20interested%20in%20Sai%20Signature%20Nerul" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
+  <a class="sb-enq" href="#enquiry">Enquire Now</a>
+</div>
+
+<script src="script.js?v=2" defer></script>
+</body>
+</html>

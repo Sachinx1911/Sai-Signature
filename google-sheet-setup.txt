@@ -1,0 +1,45 @@
+SAI SIGNATURE – Google Sheet वर Leads घेण्यासाठी Setup (एकदाच करायचं)
+=====================================================================
+
+STEP 1 — Google Sheet बनवा
+  1. sheets.google.com उघडा -> Blank spreadsheet.
+  2. नाव द्या: "Sai Signature Leads".
+
+STEP 2 — Script टाका
+  1. त्याच Sheet मध्ये वरती menu: Extensions -> Apps Script.
+  2. आत जे default code आहे ते सगळं delete करा.
+  3. या फोल्डरमधल्या "google-sheet-code.gs" फाइलमधला सगळा code copy करून paste करा.
+  4. वरती 💾 (Save) दाबा.
+
+STEP 3 — Web App म्हणून Deploy करा
+  1. वरती उजवीकडे निळं "Deploy" -> "New deployment".
+  2. gear icon (⚙️) -> "Web app" निवडा.
+  3. Settings:
+       - Description: Sai Signature Leads
+       - Execute as: Me (तुमचा email)
+       - Who has access: **Anyone**   <-- हे महत्त्वाचं
+  4. "Deploy" दाबा -> Google परवानगी मागेल -> "Authorize access" ->
+     तुमचं Google account निवडा -> "Advanced" -> "Go to ... (unsafe)" -> Allow.
+     (हे तुमचंच script असल्याने safe आहे.)
+  5. शेवटी एक URL मिळेल असा:
+       https://script.google.com/macros/s/AKfy....../exec
+     ती URL copy करा.
+
+STEP 4 — URL website मध्ये टाका
+  1. मला (Claude ला) ती URL पाठवा,
+     किंवा "script.js" फाइल उघडून वरती हे शोधा:
+        var SHEET_ENDPOINT = '';
+     आणि quotes मध्ये URL टाका:
+        var SHEET_ENDPOINT = 'https://script.google.com/macros/s/AKfy...../exec';
+     (टीप: security header files _headers / .htaccess मुळे connect फक्त
+      script.google.com लाच परवानगी आहे — तीच URL वापरा.)
+
+STEP 5 — Test
+  1. Website वर form भरून submit करा.
+  2. Google Sheet मध्ये नवीन row आली पाहिजे (Time, Type, Name, Mobile, Budget...).
+
+टीप:
+  - Code बदलल्यास परत Deploy -> "Manage deployments" -> पेन्सिल (edit) ->
+    Version: "New version" -> Deploy. (URL तीच राहते.)
+  - Sheet आपोआप header row पहिल्यांदा तयार करतो.
+  - या setup ला काहीही खर्च नाही (Google free).
